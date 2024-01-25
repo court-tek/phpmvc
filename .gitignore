@@ -6,4 +6,5 @@
 
 # Ignore htaccess.
 /.htaccess
+**/.htaccess
 
