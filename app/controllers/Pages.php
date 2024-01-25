@@ -1,5 +1,6 @@
 <?php
-    class Pages {
+    class Pages extends Controller 
+    {
         public function __construct()
         {
             // echo 'Pages controller loaded';
@@ -7,7 +8,8 @@
 
         public function index()
         {
-            echo 'This is the index page';
+            $this->view('pages/welcome', ['title' => 'Welcome']);
+            // echo 'This is the index page';
         }
 
         public function new()
@@ -25,8 +27,8 @@
             echo 'This is the edit page';
         }
 
-        public function about($id) 
+        public function about() 
         {
-            echo 'This page is about us, hello. Your number is ' . $id;
+            echo 'This page is about us, hello. Your number is ';
         }
     }
