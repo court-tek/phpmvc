@@ -55,9 +55,36 @@
                     case is_null($value):
                         $type = PDO::PARAM_NULL;
                         break;
-                    default:
+                     default:
                         $type = PDO::PARAM_STR ;
                 }
             }
+
+            $this->stmt->bindvalue($param, $value, $type);
+        }
+
+        // Execute the prepared statement
+        public function execute()
+        {
+            return $this->stmt->execute();
+        }
+
+        // Get result set as an array of objects
+        public function resultSet()
+        {
+            $this->execute(); 
+            return $this->stmt->fetchAll(PDO::FETCH_OBJ); 
+        }
+
+        public function single()
+        {
+            $this->execute();
+            return $this->stmt->fetch(PDO::FETCH_OBJ);
+        }
+
+        // Get row count
+        public function rowCount()
+        {
+            return $this->stmt->rowCount();
         }
     }

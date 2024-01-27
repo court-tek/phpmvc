@@ -3,18 +3,21 @@
     {
         public function __construct()
         {
-            $this->postModel = $this->model('Post');
         }
 
         public function index()
         {
-            $this->view('pages/welcome', ['title' => 'Welcome']);
-            // echo 'This is the index page';
+            $data =[
+                // To add emojies control + cmd + space
+                'title' => 'PHP 🐘 mvc',
+            ];
+
+            $this->view('pages/welcome', $data);
         }
 
         public function new()
         {
-           
+           echo 'This is the new page';
         }
 
         public function show()
