@@ -1,0 +1,15 @@
+{
+    "name": "courtneygirley/phpmvc",
+    "description": "mvc app",
+    "type": "project",
+    "authors": [
+        {
+            "name": "court-tek",
+            "email": "dishoughng@gmail.com"
+        }
+    ],
+    "require": {
+        "square/square": "34.0.1.20240118",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
